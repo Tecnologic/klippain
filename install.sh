@@ -79,7 +79,7 @@ function check_download {
 
     if [ ! -d "${FRIX_CONFIG_PATH}" ]; then
         echo "[DOWNLOAD] Downloading Klippain repository..."
-        if git -C $frixtemppath clone -b $frixbranchname https://github.com/Frix-x/klippain.git $frixreponame; then
+        if git -C $frixtemppath clone -b $frixbranchname https://github.com/elpopo-eng/klippain-chocolate.git $frixreponame; then
             printf "[DOWNLOAD] Download complete!\n\n"
         else
             echo "[ERROR] Download of Klippain git repository failed!"
@@ -294,4 +294,4 @@ restart_klipper
 wget -O - https://raw.githubusercontent.com/Frix-x/klippain-shaketune/main/install.sh | bash
 
 echo "[POST-INSTALL] Everything is ok, Klippain installed and up to date!"
-echo "[POST-INSTALL] Be sure to check the breaking changes on the release page: https://github.com/Frix-x/klippain/releases"
+echo "[POST-INSTALL] Be sure to check the breaking changes on the release page: https://github.com/elpopo-eng/klippain-chocolate/releases"

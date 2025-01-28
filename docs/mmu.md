@@ -65,7 +65,7 @@ If you want to print without using the MMU features, you can use the MMU bypass 
   1. Select the bypass mode with `MMU_SELECT_BYPASS`.
   1. Finally, manually insert the filament into the bowden tube up to the extruder gears and load the filament with the `MMU_LOAD` command or start the print (the `START_PRINT` sequence will automatically try to load the filament into the toolhead).
 
-At the end of the print, you can use the `MMU_EJECT` command (if `variable_mmu_unload_on_end_print` is set to False in Klippain `variables.cfg`, otherwise it is ejected automatically) to unload the filament from the extruder and then manually pull it out of the bowden tube.
+At the end of the print, you can use the `MMU_UNLOAD` command (if `variable_mmu_unload_on_end_print` is set to False in Klippain `variables.cfg`, otherwise it is unloaded automatically) to unload the filament from the extruder and then manually pull it out of the bowden tube.
 
 ### Spoolman support with MMU
 
@@ -85,7 +85,7 @@ You can also use the `MMU_GATE_MAP GATE=n SPOOLID=id` macro at runtime to change
 ### Variable check error
 
 ```
-MMU support is enabled in Klippain, but some variables are missing from your variables.cfg. Please update your template or refer to the corresponding documentation: https://github.com/Frix-x/klippain/blob/main/docs/mmu.md
+MMU support is enabled in Klippain, but some variables are missing from your variables.cfg. Please update your template or refer to the corresponding documentation: https://github.com/elpopo-eng/klippain-chocolate/blob/main/docs/mmu.md
 ```
  
 If you have the previous message in the console when Klippain is starting, you will want to update your Klippain `variables.cfg` template file or check that the MMU variables are set correctly in it:
