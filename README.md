@@ -43,7 +43,7 @@ In case Klippain doesn't suit your needs or if you installed it by mistake, you 
 To run the uninstall script, execute the following command over SSH:
 
 ```bash
-wget -O - https://raw.githubusercontent.com/elpopo-eng/klippain-chocolate/main/uninstall.sh | bash
+wget -O - https://raw.githubusercontent.com/tecnologic/klippain/chartographer-choco-dev/uninstall.sh | bash
 ```
 
   > **Note**:
