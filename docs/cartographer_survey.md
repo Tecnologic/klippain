@@ -11,11 +11,11 @@ This can be added either in `override.cfg` or in another file included in `overr
 ```plaintext
 # the values in the example above correspond to a 350mm bed.
 
-[mcu scanner]
+[mcu cartographer]
 #canbus_uuid: 0ca8d67388c2
 #serial:/dev/serial/by-id/usb-Cartographer_614e_-if00
 
-[scanner]
+[cartographer]
 #   Offsets are measured from the center of your coil to the tip of your nozzle
 #   on a level axis. It is vital that this is accurate.
 x_offset: 0                          
@@ -25,10 +25,6 @@ y_offset: 15 # offset for standard printed carriage
 #y_offset: 23.6 # offset for CNC Cartographer     
 # Adjust for your Cartographer's offset from the nozzle to the middle of the coil
 
-backlash_comp: 0.005
-
-scanner_touch_location: 175,175 # Set to the center of the bed
-scanner_touch_z_offset: 0 # This will be added to the offset at the end of every successful touch
 
 [bed_mesh] 
 mesh_min: 40,25
@@ -46,8 +42,7 @@ algorithm: bicubic
 
 Modify the following parameters according to your bed size and toolhead:
 
-- `[scanner] y_offset`
-- `[scanner] scanner_touch_location`
+- `[cartographer] y_offset`
 
 - `[bed_mesh]  mesh_min`
 - `[bed_mesh]  mesh_max`
